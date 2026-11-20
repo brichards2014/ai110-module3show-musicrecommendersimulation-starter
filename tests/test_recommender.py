@@ -59,3 +59,37 @@ def test_explain_recommendation_returns_non_empty_string():
     explanation = rec.explain_recommendation(user, song)
     assert isinstance(explanation, str)
     assert explanation.strip() != ""
+
+
+def test_score_song_returns_score_and_reasons():
+    from src.recommender import score_song
+
+    prefs = {"genre": "pop", "mood": "happy", "energy": 0.8}
+    song = {"genre": "pop", "mood": "happy", "energy": 0.8}
+    score, reasons = score_song(prefs, song)
+
+    assert score == 4.0
+    assert any("genre match" in r for r in reasons)
+    assert any("mood match" in r for r in reasons)
+
+
+def test_load_songs_converts_numbers():
+    from src.recommender import load_songs
+
+    songs = load_songs("data/songs.csv")
+
+    assert len(songs) == 20
+    assert isinstance(songs[0]["energy"], float)
+    assert isinstance(songs[0]["tempo_bpm"], float)
+
+
+def test_recommend_songs_sorted_highest_first():
+    from src.recommender import load_songs, recommend_songs
+
+    songs = load_songs("data/songs.csv")
+    results = recommend_songs({"genre": "lofi", "mood": "chill", "energy": 0.35}, songs, k=5)
+    scores = [score for _, score, _ in results]
+
+    assert len(results) == 5
+    assert scores == sorted(scores, reverse=True)
+    assert results[0][0]["title"] == "Library Rain"

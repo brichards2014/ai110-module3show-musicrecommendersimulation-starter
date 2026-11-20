@@ -9,3 +9,13 @@ id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
 8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
 9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
 10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
+11,Concrete Crown,Block Theory,hip hop,confident,0.80,96,0.62,0.85,0.12
+12,Dust Road Hymn,Willow Creek,country,nostalgic,0.45,88,0.58,0.52,0.82
+13,Neon Pulse,Circuit Bloom,edm,euphoric,0.96,128,0.88,0.92,0.04
+14,Velvet Hours,Maya Ostrander,r&b,romantic,0.52,84,0.66,0.74,0.38
+15,Broken Static,Hollow Saints,metal,angry,0.97,168,0.30,0.45,0.06
+16,Rainy Sonata,Elise Marchetti,classical,melancholy,0.20,66,0.30,0.25,0.97
+17,Porch Light,Willow Creek,folk,sad,0.30,76,0.28,0.40,0.93
+18,Island Drift,Sol Marea,reggae,relaxed,0.55,92,0.80,0.78,0.45
+19,Basement Static,The Fuses,punk,angry,0.93,178,0.55,0.50,0.08
+20,Sunday Slow Down,Indigo Parade,indie pop,chill,0.38,82,0.68,0.57,0.66
